@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome To FlaskApp</h1>
+    <p class="lead">This application is built on the Python Flask framework.</p>
+    <hr class="my-4">
+    <p>
+      “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”
+    </p>
+
+    {% if not session.logged_in %}
+      <p class="lead text-center">
+        <a class="btn btn-primary btn-lg" href="/register" role="button">Register</a>
+        <a class="btn btn-secondary btn-lg" href="/login" role="button">Login</a>
+      </p>
+    {% else %}
+      <p class="lead text-center">
+        <a class="btn btn-success btn-lg" href="/dashboard" role="button">Go to <i>{{session.username}}'s</i> Dashboard</a>
+      </p>
+    {% endif %}
+</div>
+{% endblock %}
