@@ -8,9 +8,9 @@ from functools import wraps
 app = Flask(__name__)
 
 # config mysql
-app.config['MYSQL_HOST'] = '192.168.5.1'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'g73gle73'
+app.config['MYSQL_HOST'] = ''
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'myflaskapp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
